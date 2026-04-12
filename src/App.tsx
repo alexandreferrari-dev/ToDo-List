@@ -7,6 +7,7 @@ import SpinnerIcon from "./assets/icons/Spinner.svg?react";
 import XIcon from "./assets/icons/X-Regular.svg?react";
 import Icon from './components/icon.tsx';
 import Badge from './components/badge.tsx';
+import Button from './components/button.tsx';
 
 export default function App() {
   return (
@@ -34,6 +35,9 @@ export default function App() {
     <div>
       <Badge variant="secondary">5</Badge>
       <Badge variant="primary">2 de 5</Badge>
+    </div>
+    <div>
+      <Button icon={PlusIcon}>Nova tarefa</Button>
     </div>
   </div>
   )
