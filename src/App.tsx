@@ -12,9 +12,11 @@ import ButtonIcon from './components/button-icon.tsx';
 import InputText from './components/input-text.tsx';
 import InputCheckbox from './components/input-checkbox.tsx';
 import Card from './components/card.tsx';
+import Container from './components/container.tsx';
 
 export default function App() {
   return (
+  <Container>
   <div className="grid gap-5">
     <div className="flex flex-col gap-2">
       <Text variant="body-sm-bold" className='text-pink-base'>
@@ -58,6 +60,7 @@ export default function App() {
       <Card size="md">Olá mundo!</Card>
     </div>
   </div>
+  </Container>
   )
 }
 
