@@ -13,6 +13,7 @@ import InputText from './components/input-text.tsx';
 import InputCheckbox from './components/input-checkbox.tsx';
 import Card from './components/card.tsx';
 import Container from './components/container.tsx';
+import Skeleton from './components/skeleton.tsx';
 
 export default function App() {
   return (
@@ -38,9 +39,10 @@ export default function App() {
       <Icon svg={SpinnerIcon} animate className="fill-pink-base" />
       <Icon svg={XIcon} className="fill-pink-base" />
     </div>
-    <div>
+    <div className="flex gap-2">
       <Badge variant="secondary">5</Badge>
       <Badge variant="primary">2 de 5</Badge>
+      <Badge loading>5</Badge>
     </div>
     <div>
       <Button icon={PlusIcon}>Nova tarefa</Button>
@@ -49,15 +51,22 @@ export default function App() {
       <ButtonIcon icon={TrashIcon} variant="primary" />
       <ButtonIcon icon={TrashIcon} variant="secondary" />
       <ButtonIcon icon={TrashIcon} variant="terciary" />
+      <ButtonIcon icon={TrashIcon} loading />
     </div>
     <div>
       <InputText />
     </div>
     <div>
       <InputCheckbox />
+      <InputCheckbox loading />
     </div>
     <div>
       <Card size="md">Olá mundo!</Card>
+    </div>
+    <div className="space-y-2">
+      <Skeleton className="h-6"/>
+      <Skeleton className="h-6"/>
+      <Skeleton className="w-96 h-6"/>
     </div>
   </div>
   </Container>
