@@ -11,6 +11,7 @@ import Button from './components/button.tsx';
 import ButtonIcon from './components/button-icon.tsx';
 import InputText from './components/input-text.tsx';
 import InputCheckbox from './components/input-checkbox.tsx';
+import Card from './components/card.tsx';
 
 export default function App() {
   return (
@@ -52,6 +53,9 @@ export default function App() {
     </div>
     <div>
       <InputCheckbox />
+    </div>
+    <div>
+      <Card size="md">Olá mundo!</Card>
     </div>
   </div>
   )
