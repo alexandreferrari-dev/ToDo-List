@@ -1,5 +1,5 @@
 import _useLocalStorage from 'use-local-storage';
-import { TASKS_KEY, type Task } from '../models/task';
+import { TASKS_KEY, TaskState, type Task } from '../models/task';
 
 // Vite 8 CJS interop: export default retorna { __esModule: true, default: fn }
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -10,7 +10,7 @@ export default function useTasks() {
 
   return {
     tasks,
-    tasksCount: tasks.length,
+    createdTasksCount: tasks.filter((task) => task.state === TaskState.Created).length,
     concludedTasksCount: tasks.filter((task) => task.concluded).length
   }
 }
