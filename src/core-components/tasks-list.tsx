@@ -21,7 +21,7 @@ export default function TasksList() {
         <Button icon={PlusIcon} className="w-full" onClick={handleNewTask}>Nova tarefa</Button>
       </section>
       <section className="space-y-2">
-        {tasks.map((task) => <TaskItem key={task.id} />)} 
+        {tasks.map((task) => <TaskItem key={task.id} task={task} />)}
       </section>
     </>
   );

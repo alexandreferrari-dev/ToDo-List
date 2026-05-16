@@ -19,7 +19,7 @@ interface TaskItemProps {
 
 export default function TaskItem({task}: TaskItemProps) {
   const [isEditing, setIsEditing] = React.useState(
-    task?.state === TaskState.Created
+    task?.state === TaskState.Creating
   );
 
   function handleEditTask() {
